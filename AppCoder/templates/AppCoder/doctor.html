@@ -1,0 +1,37 @@
+{% extends "AppCoder/main_hospital.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Doctor</h1>
+{% endblock %}
+
+{% block contenido_cambia %}
+
+
+<div align="center">
+
+    <h4>Adicionar Doctor</h4>
+
+<form action="{% url 'doctor' %}" method="POST"> {% csrf_token %}
+     
+    <table>
+        {{ form.as_table}}
+    </table>
+    
+    <br/>
+
+    <input type="submit" value="Adicionar">
+    
+</form>
+
+</div>
+
+
+{% endblock %}
+
+
+{% block img_include %}
+<br/>
+<img class="img-responsive" src="{% static '\AppCoder\assets\img\web_doctor2.png' %}" >
+{% endblock %}

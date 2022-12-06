@@ -1,0 +1,22 @@
+{% extends "AppCoder/main_hospital.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Buscar Paciente</h1>
+{% endblock %}
+
+{% block contenido_cambia %}
+<h4>Digite el teléfono del paciente</h4>
+
+<form action="{% url 'buscar' %}" method="GET">
+
+    <input type="number" name="telefono" id="telefono">
+
+    <input type="submit" value="buscar">
+
+
+</form>
+{{ mensaje }}
+
+{% endblock %}

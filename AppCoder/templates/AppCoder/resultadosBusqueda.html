@@ -1,0 +1,32 @@
+{% extends "AppCoder/main_hospital.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Resultados de la Busqueda</h1>
+{% endblock %}
+
+{% block contenido_cambia %}
+<h1>Consulta de Paciente</h1>
+{% if pacientes %}
+<ul>
+    {% for paciente in pacientes %}
+    <li> {{ paciente.nombre }} </li>
+    <li> {{ paciente.apellido }} </li>
+    <li> {{ paciente.email }} </li>
+    <li> {{ paciente.telefono }} </li>
+    <br/>
+    {% endfor %}
+
+</ul>
+{% else %}
+<p>No existe el Paciente !</p>
+{% endif %}
+
+{% endblock %}
+
+
+{% block img_include %}
+
+<img class="img-responsive" src="{% static '\AppCoder\assets\img\people.png' %}" >
+{% endblock %}

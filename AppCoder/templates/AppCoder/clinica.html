@@ -1,0 +1,21 @@
+{% extends "AppCoder/main_hospital.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Hospital (SDA)</h1>
+{% endblock %}
+
+{% block contenido_cambia %}
+<div align="center"><br/>
+<h4>Bienvenidos al Hospital (SDA)</h4>
+</div>
+
+
+{{ mensaje }}
+{% endblock %}
+
+
+{% block img_success %}
+<img class="img-responsive" src="{% static '\AppCoder\assets\img\data_success.png' %}" >
+{% endblock %}
